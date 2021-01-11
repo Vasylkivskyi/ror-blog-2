@@ -1,0 +1,105 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.posts-list {
+  padding: 0.5rem 0;
+  .post-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid gray;
+
+    &:first-child {
+      border-top: 2px solid gray;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .btn-container {
+      display: flex;
+      padding-top: 0.5rem;
+
+      .btn {
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.errors-list {
+  position: relative;
+  padding: 1rem 2rem .5rem 2rem;
+  border: 2px solid red;
+  border-radius: 2px;
+  margin: 0;
+  margin-bottom: 10px;
+
+  .errors-label {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: white;
+    padding: 2px 5px;
+  }
+
+  .error {
+    width: 100%;
+    color: red;
+    font-size: 16px;
+    padding: .5 0;
+  }
+}
+
+.form-container {
+  padding: 0.5rem 0 1rem 0;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .label {
+      display: inline;
+      width: 50px;
+      margin-bottom: -12px;
+      padding: 2px 10px;
+      border-radius: 5px;
+      background-color: white;
+      margin-left: 10px;
+      z-index: 1;
+    }
+    .input {
+      border: 2px solid gray;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      max-width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      &.text-area {
+        height: 25rem;
+        width: 100%;
+      }
+    }
+    .field_with_errors {
+      width: 100%;
+      position: relative;
+
+      .label {
+        display: inline;
+        width: 50px;
+        position: absolute;
+        top: -10px;
+        padding: 2px 10px;
+        border-radius: 5px;
+        background-color: white;
+        margin-left: 10px;
+        z-index: 1;
+      }
+    }
+  }
+}
