@@ -5,7 +5,7 @@
     <div>
       <h2 class="post-text"><%= post.title %></h2>
       <p class="post-text">
-        <%= post.text %>
+        <%= simple_format(truncate(post.text, length: 300)) %>
       </p>
       <div class="btn-container">
         <%= link_to  "Edit", edit_post_path(post), class: "btn" %>
